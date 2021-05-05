@@ -59,6 +59,8 @@ let isRunning = false;
 let tempoTextString = getTempoDesctiption();
 tempoText.textContent = tempoTextString;
 
+// TODO: pull out these hardcoded numbers to variables for maintainability
+
 decreaseTempoBtn.addEventListener('click', ()=>{
     if(bpm <= 20) return; // min number
     bpm--;
@@ -155,5 +157,3 @@ function playClick(){
 }
 
 const metronome = new Timer(playClick, 60000 / bpm, { immediate: true });
-
-//metronome.start();
